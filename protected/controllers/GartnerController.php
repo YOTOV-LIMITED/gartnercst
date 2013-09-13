@@ -167,8 +167,10 @@ class GartnerController extends Controller {
 			$model->UpdateTime = $model->CreateTime;
 			$model->setScenario('Accepted');
 			if($model->save()){
-				Gartner::sendLocalMail($model->Email);
-				//Gartner::sendMail($model->Email);
+				//Gartner::sendLocalMail($model->Email);
+				$this->sendMail($model->Email,
+				'Thank you for registering to attend the Gartner Stamford and Trumbull Associates Holiday Party','amazon',
+				'amazon');
 				$this->redirect(array("gartner/join"));
 			}
 		}
