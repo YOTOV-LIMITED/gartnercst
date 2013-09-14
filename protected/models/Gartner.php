@@ -58,6 +58,7 @@ class Gartner extends CActiveRecord {
 		//	array('optionsRadios', 'required', 'on' => 'Accepted', 'message' => 'Please indicate if you are bringing a guest.'),
 			array('Email', 'length', 'max'=>100),
 			array('Email', 'email'),
+			array('Email','unique','message' => 'Email already registered.'),
 			array('DeclineReason, OtherDietaryRequirements, GuestOtherDietaryRequirements', 'length', 'max'=>200),
 			array('CreateTime, UpdateTime', 'length', 'max'=>20),
 			// The following rule is used by search().

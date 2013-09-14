@@ -169,8 +169,7 @@ class GartnerController extends Controller {
 			if($model->save()){
 				//Gartner::sendLocalMail($model->Email);
 				$this->sendMail($model->Email,
-				'Thank you for registering to attend the Gartner Stamford and Trumbull Associates Holiday Party','amazon',
-				'amazon');
+				'Thank you for registering to attend the Gartner Stamford and Trumbull Associates Holiday Party');
 				$this->redirect(array("gartner/join"));
 			}
 		}

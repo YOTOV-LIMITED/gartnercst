@@ -25,7 +25,7 @@ class Controller extends CController
 	/**
 	 * sendmail
 	 */
-	public function sendMail($to,$title,$user,$view='email',$cc="") {
+	public function sendMail($to,$title,$cc="") {
 		$content = $this->emailContent();
 		if($this->mail == 'sendmail'){
 		// 当发送 HTML 电子邮件时，请始终设置 content-type
@@ -59,29 +59,25 @@ class Controller extends CController
 			Yii::log("ses sending email\t" . $to . "\t" . CJSON::encode($result),'error');
 		}else{
 			$mailer = Yii::app()->mailer;
-// 			$mailer->Host = 'smtp.bizmail.yahoo.com';
-// 			$mailer->Username = 'support@magictony-se.com';    //这里输入发件地址的用户名
-// 			$mailer->Password = 'magictony1234';    //这里输入发件地址的密码
-// 			$mailer->From = 'support@magictony-se.com';
 			$mailer->From = 'test@brightac.com.cn';
 			$mailer->Host = 'smtp.exmail.qq.com';
 			$mailer->Username = 'test@brightac.com.cn';    //这里输入发件地址的用户名
 			$mailer->Password = 'brightac2204';    //这里输入发件地址的密码
 			$mailer->SMTPDebug = true;   //设置SMTPDebug为true，就可以打开Debug功能，根据提示去修改配置
-			$mailer->setPathViews('application.views.user');
+			//$mailer->setPathViews('application.views.user');
 			$mailer->IsSMTP();
 			$mailer->SMTPAuth = true;
 			if($cc!="" && $cc!=null){
 				$mailer->AddCC($cc);
 			}
 			
-			$mailer->AddReplyTo('corporateevents@gartner.com');
-			$mailer->AddAddress("tony.chen@magictony-se.com");
+			//$mailer->AddReplyTo('corporateevents@gartner.com');
+			$mailer->AddAddress($to);
 			$mailer->FromName = 'Gartner Corporate Events';
 			$mailer->CharSet = 'UTF-8';
 			$mailer->Subject = $title;
 			$mailer->IsHTML(true);
-			$mailer->getView($view,array('model'=>$user));
+			$mailer->Body = $content;
 			$mailer->Send();
 		}
 	}
