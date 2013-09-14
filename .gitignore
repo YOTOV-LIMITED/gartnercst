@@ -1,7 +1,8 @@
+
 #################
 ## Eclipse
 #################
-
+/protected/config/database.php
 *.pydevproject
 .project
 .metadata

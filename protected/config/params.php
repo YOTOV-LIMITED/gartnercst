@@ -16,7 +16,14 @@ $paramsConfig = array (
     		'address' => 'corporateevents@gartner.com', 
     		'username' => 'corporateevents',
     		'password' => ''				
-    	)
+    	),
+    	'ses'=>array(
+				'accessKey'=>'AKIAIPH65IQ3TFH6FVKA',
+				'secretKey'=>'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',
+				'replyTo'=>'corporateevents@gartner.com',
+				'returnPath'=>'corporateevents@gartner.com',
+				'from'=>'Gartner Corporate Events<corporateevents@gartner.com>',
+		),
     )
 );
 

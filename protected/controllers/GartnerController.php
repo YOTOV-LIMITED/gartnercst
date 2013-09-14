@@ -168,8 +168,7 @@ class GartnerController extends Controller {
 			$model->setScenario('Accepted');
 			if($model->save()){
 				//Gartner::sendLocalMail($model->Email);
-				$this->sendMail($model->Email,
-				'Thank you for registering to attend the Gartner Stamford and Trumbull Associates Holiday Party');
+				$this->sendMail($model->Email,Yii::app()->params['Email']['subject']);
 				$this->redirect(array("gartner/join"));
 			}
 		}
