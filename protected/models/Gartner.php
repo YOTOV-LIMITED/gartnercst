@@ -267,7 +267,7 @@ class Gartner extends CActiveRecord {
 		return $sorts;
 	}
 	
-	function sort_objs($list,$key,$order='asc') {
+	public static function sort_objs($list,$key,$order='asc') {
 		if(empty($list) || !isset($list[0]->{$key}))
 			return $list;
 	
