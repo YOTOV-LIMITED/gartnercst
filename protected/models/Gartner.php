@@ -58,7 +58,7 @@ class Gartner extends CActiveRecord {
 		//	array('optionsRadios', 'required', 'on' => 'Accepted', 'message' => 'Please indicate if you are bringing a guest.'),
 			array('Email', 'length', 'max'=>100),
 			array('Email', 'email'),
-			array('Email','unique','message' => 'Email already registered.'),
+			array('Email','unique','message' => 'Your registration is already confirmed. If you have any queries please contact <a href="mailto:corporateevents@gartner.com">corporateevents@gartner.com</a>'),
 			array('DeclineReason, OtherDietaryRequirements, GuestOtherDietaryRequirements', 'length', 'max'=>200),
 			array('CreateTime, UpdateTime', 'length', 'max'=>20),
 			// The following rule is used by search().
@@ -163,6 +163,10 @@ class Gartner extends CActiveRecord {
 				2 => 'Vegetarian',
 				3 => 'Vegan',
 				4 => 'Gluten Free',
+				5 => 'Halal',
+				6 => 'Kosher',
+				7 => 'Lactose Intolerant',
+				8 => 'Allerigc to sea food',				
 				9 => 'Other'
 		);
 		return $requirements;
@@ -354,7 +358,7 @@ class Gartner extends CActiveRecord {
 			<tr align="center"><td>10 North Water Street</td></tr>
 			<tr align="center"><td>Norwalk,</td></tr>
 			<tr align="center"><td>CT, 06854</td></tr>
-			<tr align="center"><td>Thursday December, 19,2013 from 6:30pm</td></tr>
+			<tr align="center"><td>Thursday, December 19, 2013 from 6:30pm</td></tr>
 	   </table>
 	 </p>
 	<p style="color:#0065a4">How to Get There:</p>

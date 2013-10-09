@@ -8,7 +8,7 @@
 			<tr align="center"><td>10 North Water Street</td></tr>
 			<tr align="center"><td>Norwalk,</td></tr>
 			<tr align="center"><td>CT, 06854</td></tr>
-			<tr align="center"><td>Thursday December, 19,2013 from 6:30pm</td></tr>
+			<tr align="center"><td>Thursday, December 19, 2013 from 6:30pm</td></tr>
 	   </table>
 	 </p>
 	<p style="color:#0065a4">How to Get There:</p>
