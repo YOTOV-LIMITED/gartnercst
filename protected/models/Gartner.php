@@ -348,7 +348,7 @@ class Gartner extends CActiveRecord {
 	<body>
 	<div style="width:800px;margin:auto;">
 	<div style="height:100px;">
-	<img src="https://app.magictony-se.com/gartnercst/images/XmasHeader10.jpg">
+	<img src="https://app.corporate-reg.com/gartnercst/images/XmasHeader10.jpg">
 	</div>
 	<br />
 	<p>Thank you for registering to attend the Gartner Stamford and Trumbull Associates Holiday Party. We have pleasure in confirming your attendance at the event.</p>
@@ -377,7 +377,7 @@ class Gartner extends CActiveRecord {
 	<p>If you have any questions about the event, or need to make any changes to your registration above, please contact the Corporate Events team at:<a href="mailto:corporateevents@gartner.com">corporateevents@gartner.com</a></p>
 	<br /><br /><br />
 <div style="float:left;width:100%;height:100px;">
-	<img src="https://app.magictony-se.com/gartnercst/images/XmasFooter10.jpg">
+	<img src="https://app.corporate-reg.com/gartnercst/images/XmasFooter10.jpg">
 	</div>
 	</div>
 	</body>
