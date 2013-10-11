@@ -166,7 +166,7 @@ class Gartner extends CActiveRecord {
 				5 => 'Halal',
 				6 => 'Kosher',
 				7 => 'Lactose Intolerant',
-				8 => 'Allerigc to sea food',				
+				8 => 'Allergic to sea food',				
 				9 => 'Other'
 		);
 		return $requirements;
